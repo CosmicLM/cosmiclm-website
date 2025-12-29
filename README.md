@@ -1,2 +1,1 @@
-# CosmicLM Website Infrastructure 
-# 🚧 Currently under active development. 🚧
+# CosmicLM Website Infrastructure - 🚧 Currently under active development. 🚧
