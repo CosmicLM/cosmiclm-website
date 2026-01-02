@@ -41,9 +41,9 @@ N/A
 ### 3. Investigation & Experiments
 * **Test A:** Verify which file can be transfered of may remain
     * *Code:* N/A
-    * *Result:* 
+    * *Result:* None. Most files had to be wiped off except for a few
 * **Test B:** 
-    * *Action:* 
+    * *Action:*
     * *Result:*
 
 ### 4. Solution
