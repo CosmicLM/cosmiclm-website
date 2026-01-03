@@ -3,10 +3,6 @@ import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Mesh } from 'three';
 
-// This is an exported constant component that uses React Three Fiber to create and animate 
-// a 3D sphere mesh representing an atom. It's exported to allow it to be imported and used 
-// in other parts of the application, such as in page layouts or other component compositions.
-
 export const HeroAtom = () => {
     //Referencing Mesh to rotate the atom
     const sphereRef = useRef<Mesh>(null);
@@ -16,6 +12,7 @@ export const HeroAtom = () => {
 useFrame((_state, delta ) => {
     if (sphereRef.current) {
         //Rotate constantly and steadily regarless of the frame rate
+        //setting this rule to run smoothly on any device, regardless of the performance or hardware.
         sphereRef.current.rotation.y += delta * 0.5;
         sphereRef.current.rotation.x += delta * 0.2;
     }
@@ -23,9 +20,8 @@ useFrame((_state, delta ) => {
 
 return (
   <mesh ref={sphereRef} scale={2}>
-    {/* Implementing the geometric sphere */}
+    {/*// Using an Icosahedron (20-sided) instead of a Sphere for a sharper base for the atom visualizer*/}
     <icosahedronGeometry args={[1, 1]}/>
-    {/* imposing specific theme to sphere*/}
     <meshStandardMaterial color="#00FF88" wireframe />
     </mesh>
     );
