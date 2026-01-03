@@ -21,7 +21,7 @@ useFrame((_state, delta ) => {
 return (
   <mesh ref={sphereRef} scale={2}>
     {/*// Using an Icosahedron (20-sided) instead of a Sphere for a sharper base for the atom visualizer*/}
-    <icosahedronGeometry args={[1, 1]}/>
+    <icosahedronGeometry args={[1, 2]}/>
     <meshStandardMaterial color="#00FF88" wireframe />
     </mesh>
     );
